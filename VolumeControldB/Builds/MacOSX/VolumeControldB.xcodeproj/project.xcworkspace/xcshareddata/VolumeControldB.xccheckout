@@ -6,31 +6,35 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>EB2B4729-A0E4-4368-A6DB-2F5E6BD7500E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VolumeControldB</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>DEBAC9C6799FD4E8074B3BAF720718E3C3499FA0</key>
-		<string>https://github.com/julianstorer/JUCE.git</string>
+		<key>5A8E1255994645B09692FB77FA083B20458C5FB3</key>
+		<string>https://github.com/deepakantony/audio_plugins.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>VolumeControldB/Builds/MacOSX/VolumeControldB.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DEBAC9C6799FD4E8074B3BAF720718E3C3499FA0</key>
-		<string>JUCE/</string>
+		<key>5A8E1255994645B09692FB77FA083B20458C5FB3</key>
+		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/julianstorer/JUCE.git</string>
+	<string>https://github.com/deepakantony/audio_plugins.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DEBAC9C6799FD4E8074B3BAF720718E3C3499FA0</string>
+	<string>5A8E1255994645B09692FB77FA083B20458C5FB3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DEBAC9C6799FD4E8074B3BAF720718E3C3499FA0</string>
+			<string>5A8E1255994645B09692FB77FA083B20458C5FB3</string>
 			<key>IDESourceControlWCCName</key>
-			<string>JUCE</string>
+			<string>audio_plugins</string>
 		</dict>
 	</array>
 </dict>

@@ -18,7 +18,7 @@ VolumeControldBAudioProcessorEditor::VolumeControldBAudioProcessorEditor (Volume
 {
     // add some sliders..
     addAndMakeVisible (gainSlider);
-    gainSlider.setSliderStyle (Slider::Rotary);
+    gainSlider.setSliderStyle (Slider::LinearBarVertical);
     gainSlider.addListener (this);
     gainSlider.setRange (-80.0, 0.0, 0.1);
     // add some labels for the sliders..
@@ -49,7 +49,7 @@ void VolumeControldBAudioProcessorEditor::resized()
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
     //gainLabel.setBounds(10, 10, 100, 40);
-    gainSlider.setBounds(10, 10, 150, 40);
+    gainSlider.setBounds(10, 10, 40, 150);
 }
 
 void VolumeControldBAudioProcessorEditor::timerCallback()
@@ -61,6 +61,6 @@ void VolumeControldBAudioProcessorEditor::sliderValueChanged(Slider *pSlider)
 {
     if( pSlider == &gainSlider)
     {
-        
+        processor.setParameterNotifyingHost( VolumeControldBAudioProcessor::gainParam, pSlider->getValue());
     }
 }

@@ -12,9 +12,12 @@
 #include "PluginEditor.h"
 
 
+#define DEFAULT_GAIN_DB 0.0f
+
 //==============================================================================
 VolumeControldBAudioProcessor::VolumeControldBAudioProcessor()
 {
+    gainInDB = DEFAULT_GAIN_DB;
 }
 
 VolumeControldBAudioProcessor::~VolumeControldBAudioProcessor()
@@ -34,11 +37,27 @@ int VolumeControldBAudioProcessor::getNumParameters()
 
 float VolumeControldBAudioProcessor::getParameter (int index)
 {
+    switch (index) {
+        case gainParam:
+            return gainInDB;
+            
+        default:
+            break;
+    }
+    
     return 0.0f;
 }
 
 void VolumeControldBAudioProcessor::setParameter (int index, float newValue)
 {
+    switch (index) {
+        case gainParam:
+            gainInDB = newValue;
+            break;
+            
+        default:
+            break;
+    }
 }
 
 const String VolumeControldBAudioProcessor::getParameterName (int index)
@@ -154,6 +173,11 @@ void VolumeControldBAudioProcessor::processBlock (AudioSampleBuffer& buffer, Mid
         float* channelData = buffer.getWritePointer (channel);
 
         // ..do something to the data...
+        
+        float linearGain = pow(10, gainInDB/20.f);
+        
+        for(int sample = 0; sample < buffer.getNumSamples(); ++sample)
+            channelData[sample] *= linearGain;
     }
 }
 

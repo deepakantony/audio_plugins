@@ -64,8 +64,16 @@ public:
     //==============================================================================
     void getStateInformation (MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
+    
+    enum Parameters
+    {
+        gainParam = 1,
+        totalParams
+    };
 
 private:
+    float gainInDB;
+    
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VolumeControldBAudioProcessor)
 };
